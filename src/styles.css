@@ -1,13 +1,12 @@
 body {
-  
-  /* You had backgroundcolor with blur (invalid in CSS-in-JS). 
-     This seems like you meant backdrop-filter. */
- background: rgba(232, 208, 208, 0.692);
- background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=');
- background-repeat: no-repeat;
-  background-size: cover;
-  
-   
+  background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=');
+  background-repeat: no-repeat;
+  background-size: cover;       /* 🔑 makes it cover full screen */
+  background-position: center;  /* keep image centered */
+  background-attachment: fixed; /* optional: keeps it fixed while scrolling */
+  min-height: 100vh;            /* ensure it covers viewport */
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -94,6 +93,11 @@ body {
   .container {
     margin: 1rem;
     padding: 0.5rem;
+  }
+    .body body {
+    height: auto;
+    background-size: cover;      /* still cover */
+    background-position: center; /* center on mobile */
   }
 
   .input {
